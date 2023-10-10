@@ -19,6 +19,7 @@ class PillarboxPackage : TurboReactPackage() {
   }
 
   override fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<View, ReactShadowNode<*>>> {
+    //return mutableListOf(PillarboxViewManager()) as MutableList<ViewManager<View, ReactShadowNode<*>>>
     return super.createViewManagers(reactContext).toMutableList().apply { add(PillarboxViewManager()) }
   }
 

@@ -1,25 +1,18 @@
 import * as React from 'react';
-import {requireNativeComponent} from 'react-native';
-
-/**
- * Composes `View`.
- *
- * - src: string
- * - borderRadius: number
- * - resizeMode: 'cover' | 'contain' | 'stretch'
- */
-module.exports = requireNativeComponent('PillarboxReactView');
-
+import {TurboModuleRegistry} from 'react-native';
 import { StyleSheet, View, Text } from 'react-native';
+
+import {Pillarbox} from 'react-native-pillarbox'
 
 export default function App() {
   return (
 
     <View style={styles.container}>
-      <PillarboxReactView />
+      <Text>Coucou pillarbox</Text>
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {

@@ -1,7 +1,8 @@
 package com.pillarbox
 
-import android.view.View
-import androidx.media3.common.Player
+import android.util.Log
+import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.util.EventLogger
 import ch.srgssr.pillarbox.core.business.DefaultPillarbox
 import ch.srgssr.pillarbox.core.business.MediaItemUrn
 import com.facebook.react.bridge.ReactApplicationContext
@@ -12,7 +13,9 @@ class PillarboxModule(reactContext: ReactApplicationContext) :
   NativePillarboxSpec(reactContext) {
 
   init {
+    Log.d("Coucou", "Je suis là!")
     player = DefaultPillarbox(reactContext.applicationContext)
+    player.addAnalyticsListener(EventLogger("Coucou"))
     play()
   }
 
@@ -21,6 +24,7 @@ class PillarboxModule(reactContext: ReactApplicationContext) :
     player.prepare()
     player.setMediaItem(MediaItemUrn(urn))
     player.play()
+
   }
 
   fun seekTo(position: Long) {
@@ -43,16 +47,8 @@ class PillarboxModule(reactContext: ReactApplicationContext) :
     return NAME
   }
 
-  // Example method
-  // See https://reactnative.dev/docs/native-modules-android
-  override fun multiply(a: Double, b: Double): Double {
-    return a * b + 1
-  }
-
-
-
   companion object {
     const val NAME = "Pillarbox"
-    lateinit var player: Player
+    lateinit var player: ExoPlayer
   }
 }
