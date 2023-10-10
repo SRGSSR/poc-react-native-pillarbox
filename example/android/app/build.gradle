@@ -103,6 +103,15 @@ android {
     }
 }
 
+repositories {
+  maven {
+    url = uri("https://maven.pkg.github.com/SRGSSR/pillarbox-android")
+    credentials {
+      username = github_username
+      password = github_password
+    }
+  }
+}
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
