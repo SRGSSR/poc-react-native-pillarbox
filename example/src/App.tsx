@@ -1,14 +1,22 @@
 import * as React from 'react';
+import {requireNativeComponent} from 'react-native';
+
+/**
+ * Composes `View`.
+ *
+ * - src: string
+ * - borderRadius: number
+ * - resizeMode: 'cover' | 'contain' | 'stretch'
+ */
+module.exports = requireNativeComponent('PillarboxReactView');
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-pillarbox';
-
-const result = multiply(3, 7);
 
 export default function App() {
   return (
+
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <PillarboxReactView />
     </View>
   );
 }

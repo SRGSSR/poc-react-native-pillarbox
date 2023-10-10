@@ -8,8 +8,6 @@ import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import com.facebook.react.uimanager.ReactShadowNode
 import com.facebook.react.uimanager.ViewManager
-import java.util.Collections
-import java.util.HashMap
 
 class PillarboxPackage : TurboReactPackage() {
   override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
@@ -21,7 +19,7 @@ class PillarboxPackage : TurboReactPackage() {
   }
 
   override fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<View, ReactShadowNode<*>>> {
-    return mutableListOf(PillarboxViewManager())
+    return super.createViewManagers(reactContext).toMutableList().apply { add(PillarboxViewManager()) }
   }
 
   override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
