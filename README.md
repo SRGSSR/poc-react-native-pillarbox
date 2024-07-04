@@ -1,6 +1,6 @@
 # react-native-pillarbox
 
-Pillarbox
+a player
 
 ## Installation
 
@@ -12,12 +12,13 @@ npm install react-native-pillarbox
 
 
 ```js
-import { multiply } from 'react-native-pillarbox';
+import { PillarboxView } from "react-native-pillarbox";
 
 // ...
 
-const result = multiply(3, 7);
+<PillarboxView color="tomato" />
 ```
+
 
 ## Contributing
 

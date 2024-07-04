@@ -1,3 +1,2 @@
-
-export {Pillarbox } from './NativePillarbox';
-export {PillarboxReactView} from './PillarboxReactViewNativeComponent'
+export { default as PillarboxView } from './PillarboxViewNativeComponent';
+export * from './PillarboxViewNativeComponent';

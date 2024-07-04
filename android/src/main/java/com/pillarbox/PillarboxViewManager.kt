@@ -1,27 +1,28 @@
 package com.pillarbox
 
-import androidx.media3.common.Player
-import androidx.media3.ui.PlayerView
-import com.facebook.react.uimanager.SimpleViewManager
+import android.graphics.Color
+import com.facebook.react.module.annotations.ReactModule
+import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.uimanager.ThemedReactContext
+import com.facebook.react.uimanager.annotations.ReactProp
 
-class PillarboxViewManager : SimpleViewManager<PlayerView>() {
+@ReactModule(name = PillarboxViewManager.NAME)
+class PillarboxViewManager :
+  PillarboxViewManagerSpec<PillarboxView>() {
   override fun getName(): String {
-      return NAME
+    return NAME
   }
 
-  override fun createViewInstance(contextReact: ThemedReactContext): PlayerView {
-    val view = PlayerView(contextReact)
-    view.player = PillarboxModule.player
-    return view
+  public override fun createViewInstance(context: ThemedReactContext): PillarboxView {
+    return PillarboxView(context)
   }
 
-  override fun onDropViewInstance(view: PlayerView) {
-    super.onDropViewInstance(view)
-    view.player = null
+  @ReactProp(name = "color")
+  override fun setColor(view: PillarboxView?, color: String?) {
+    view?.setBackgroundColor(Color.parseColor(color))
   }
 
-  companion object{
-    const val NAME = "PillarboxReactView"
+  companion object {
+    const val NAME = "PillarboxView"
   }
 }

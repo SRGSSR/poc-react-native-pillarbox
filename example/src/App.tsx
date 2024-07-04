@@ -1,18 +1,15 @@
-import * as React from 'react';
-import {TurboModuleRegistry} from 'react-native';
-import { StyleSheet, View, Text } from 'react-native';
+import React from 'react';
 
-import {Pillarbox} from 'react-native-pillarbox'
+import { StyleSheet, View } from 'react-native';
+import { PillarboxView } from 'react-native-pillarbox';
 
 export default function App() {
   return (
-
     <View style={styles.container}>
-      <Text>Coucou pillarbox</Text>
+      <PillarboxView color="#32a852" style={styles.box} />
     </View>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
