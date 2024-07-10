@@ -1,23 +1,27 @@
 # react-native-pillarbox
 
-Pillarbox
+a player
 
 ## Installation
 
+- At the root level of your project, run:
 ```sh
-npm install react-native-pillarbox
+yarn && yarn pod-install
 ```
+
+- Reboot Xcode every time you run `yarn pod-install` to ensure the changes are applied.
 
 ## Usage
 
 
 ```js
-import { multiply } from 'react-native-pillarbox';
+import { PillarboxView } from "react-native-pillarbox";
 
 // ...
 
-const result = multiply(3, 7);
+<PillarboxView color="tomato" />
 ```
+
 
 ## Contributing
 

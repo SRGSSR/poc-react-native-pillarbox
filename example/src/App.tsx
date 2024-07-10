@@ -1,28 +1,36 @@
-import * as React from 'react';
-import {TurboModuleRegistry} from 'react-native';
-import { StyleSheet, View, Text } from 'react-native';
+import React, { useRef,useEffect } from 'react';
 
-import {Pillarbox} from 'react-native-pillarbox'
+import { Pressable, StyleSheet, View } from 'react-native';
+import PillarboxComponent from '../../src/PillarboxComponent';
 
 export default function App() {
+  const pillarbox=useRef<any>();
   return (
-
     <View style={styles.container}>
-      <Text>Coucou pillarbox</Text>
+      <PillarboxComponent ref={pillarbox} color={"#32a852"} style={styles.box} />
+      <Pressable
+        style={{
+          width: 50,
+          height: 50,
+          backgroundColor: 'red',
+          position: 'absolute',
+        }}
+        onPress={() => pillarbox.current.play()}
+      />
     </View>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'black',
   },
   box: {
-    width: 60,
-    height: 60,
+    width: 500,
+    height: 250,
     marginVertical: 20,
   },
 });
