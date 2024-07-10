@@ -11,10 +11,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1DCE0DFFE86D9EC98C234D53 /* Pods_PillarboxExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FF9870978E8805905A0C48 /* Pods_PillarboxExample.framework */; };
-		427DF78A1BC82DBA68B2B8C2 /* Pods_PillarboxExample_PillarboxExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7978AE16F2DDCEB91FC1ED36 /* Pods_PillarboxExample_PillarboxExampleTests.framework */; };
 		488EE2F1F6683DBCA98E853E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C4A02B7470B2469920B097E2 /* PrivacyInfo.xcprivacy */; };
+		74191BCB3269DBB46683F2C7 /* Pods_PillarboxExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A45009885C09294B842F809 /* Pods_PillarboxExample.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		D0FA27B045A9555AF549C656 /* Pods_PillarboxExample_PillarboxExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ACFE886E264D861AE36F986 /* Pods_PillarboxExample_PillarboxExampleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +41,10 @@
 		3B4392A12AC88292D35C810B /* Pods-PillarboxExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PillarboxExample.debug.xcconfig"; path = "Target Support Files/Pods-PillarboxExample/Pods-PillarboxExample.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-PillarboxExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PillarboxExample.release.xcconfig"; path = "Target Support Files/Pods-PillarboxExample/Pods-PillarboxExample.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-PillarboxExample-PillarboxExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PillarboxExample-PillarboxExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-PillarboxExample-PillarboxExampleTests/Pods-PillarboxExample-PillarboxExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7978AE16F2DDCEB91FC1ED36 /* Pods_PillarboxExample_PillarboxExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PillarboxExample_PillarboxExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ACFE886E264D861AE36F986 /* Pods_PillarboxExample_PillarboxExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PillarboxExample_PillarboxExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A45009885C09294B842F809 /* Pods_PillarboxExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PillarboxExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PillarboxExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-PillarboxExample-PillarboxExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PillarboxExample-PillarboxExampleTests.release.xcconfig"; path = "Target Support Files/Pods-PillarboxExample-PillarboxExampleTests/Pods-PillarboxExample-PillarboxExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		99FF9870978E8805905A0C48 /* Pods_PillarboxExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PillarboxExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A02B7470B2469920B097E2 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = PillarboxExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				427DF78A1BC82DBA68B2B8C2 /* Pods_PillarboxExample_PillarboxExampleTests.framework in Frameworks */,
+				D0FA27B045A9555AF549C656 /* Pods_PillarboxExample_PillarboxExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DCE0DFFE86D9EC98C234D53 /* Pods_PillarboxExample.framework in Frameworks */,
+				74191BCB3269DBB46683F2C7 /* Pods_PillarboxExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				99FF9870978E8805905A0C48 /* Pods_PillarboxExample.framework */,
-				7978AE16F2DDCEB91FC1ED36 /* Pods_PillarboxExample_PillarboxExampleTests.framework */,
+				7A45009885C09294B842F809 /* Pods_PillarboxExample.framework */,
+				6ACFE886E264D861AE36F986 /* Pods_PillarboxExample_PillarboxExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
