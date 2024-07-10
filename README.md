@@ -4,9 +4,12 @@ a player
 
 ## Installation
 
+- At the root level of your project, run:
 ```sh
-npm install react-native-pillarbox
+yarn && yarn pod-install
 ```
+
+- Reboot Xcode every time you run `yarn pod-install` to ensure the changes are applied.
 
 ## Usage
 

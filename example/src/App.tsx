@@ -16,10 +16,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'black',
   },
   box: {
-    width: 60,
-    height: 60,
+    width: 500,
+    height: 250,
     marginVertical: 20,
   },
 });

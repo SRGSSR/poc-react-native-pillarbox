@@ -26,7 +26,6 @@ using namespace facebook::react;
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-  NSLog(@"Jaja");
   if (self = [super initWithFrame:frame]) {
     static const auto defaultProps = std::make_shared<const PillarboxViewProps>();
     _props = defaultProps;

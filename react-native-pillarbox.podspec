@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
     ReactNativePodsUtils.spm_dependency(s,  
       url: 'https://github.com/srgssr/pillarbox-apple.git', 
       requirement: {kind: 'upToNextMajorVersion', minimumVersion: '2.0.0'}, 
-      products: ['PillarboxPlayer'] 
+      products: ['PillarboxCoreBusiness'] 
     ) 
   else 
     raise "Please upgrade React Native to >=0.75.0 to use SPM dependencies." 
