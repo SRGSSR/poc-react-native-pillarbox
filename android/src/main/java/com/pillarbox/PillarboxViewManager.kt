@@ -17,6 +17,10 @@ class PillarboxViewManager :
     return PillarboxView(context)
   }
 
+  override fun play(view: PillarboxView?) {
+    view?.play()
+  }
+
   @ReactProp(name = "color")
   override fun setColor(view: PillarboxView?, color: String?) {
     view?.setBackgroundColor(Color.parseColor(color))

@@ -2,6 +2,7 @@ package com.pillarbox
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.widget.FrameLayout
 import androidx.annotation.OptIn
 import androidx.media3.common.util.RepeatModeUtil
@@ -11,6 +12,7 @@ import androidx.media3.ui.PlayerView
 import ch.srgssr.pillarbox.core.business.DefaultPillarbox
 import ch.srgssr.pillarbox.core.business.SRGMediaItemBuilder
 import ch.srgssr.pillarbox.player.PillarboxExoPlayer
+import com.facebook.react.bridge.UiThreadUtil
 
 @OptIn(UnstableApi::class)
 class PillarboxView : FrameLayout {
@@ -23,10 +25,15 @@ class PillarboxView : FrameLayout {
   )
 
   // IF done here, after each rotation, it will be recreated
-  private lateinit var player: PillarboxExoPlayer
+  private var player: PillarboxExoPlayer
   private val playerView: PlayerView
 
   init {
+    Log.d("Coucou", "ici")
+    player = DefaultPillarbox(context)
+    player.setMediaItem(SRGMediaItemBuilder("urn:rts:video:14827306").build())
+    player.prepare()
+
     playerView = PlayerView(context)
     playerView.resizeMode = AspectRatioFrameLayout.RESIZE_MODE_FIT
     playerView.controllerAutoShow = true
@@ -40,17 +47,18 @@ class PillarboxView : FrameLayout {
 
   override fun onAttachedToWindow() {
     super.onAttachedToWindow()
-    player = DefaultPillarbox(context)
-    player.setMediaItem(SRGMediaItemBuilder("urn:rts:video:14827306").build())
-    player.prepare()
-    player.play()
-
     playerView.player = player
   }
 
   override fun onDetachedFromWindow() {
     super.onDetachedFromWindow()
     playerView.player = null
-    player.release()
+  }
+
+  fun play() {
+    // Maybe not needed! Each player function have to be called in the same thread as there it has been created.
+    UiThreadUtil.runOnUiThread {
+      player.playWhenReady = !player.playWhenReady
+    }
   }
 }
