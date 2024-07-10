@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PillarboxPlayer
 
 @objc
 public class PlayerView: NSObject {
