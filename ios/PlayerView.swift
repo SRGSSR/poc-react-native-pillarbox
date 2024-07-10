@@ -14,7 +14,7 @@ struct _PlayerView: View {
   @StateObject private var player = Player(item: .urn("urn:rts:video:15026576"))
   
   var body: some View {
-    SystemVideoView(player: player)
+    VideoView(player: player)
       .onAppear(perform: player.play)
       .ignoresSafeArea()
   }
@@ -23,7 +23,7 @@ struct _PlayerView: View {
 @objc
 public class PlayerView: NSObject {
   @objc
-  public static func view() -> UIViewController {
-    UIHostingController(rootView: _PlayerView())
+  public static func view() -> UIView {
+    UIHostingController(rootView: _PlayerView()).view
   }
 }

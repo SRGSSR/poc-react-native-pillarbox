@@ -7,6 +7,14 @@ export default function App() {
   return (
     <View style={styles.container}>
       <PillarboxView color="#32a852" style={styles.box} />
+      <View
+        style={{
+          width: 50,
+          height: 50,
+          backgroundColor: 'red',
+          position: 'absolute',
+        }}
+      />
     </View>
   );
 }

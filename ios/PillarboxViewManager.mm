@@ -20,23 +20,14 @@ RCT_EXPORT_MODULE(PillarboxView)
 RCT_CUSTOM_VIEW_PROPERTY(color, NSString, UIView)
 {
   [view setBackgroundColor: [Utils hexStringToColor:json]];
-  
-  UIViewController *playerViewController = PlayerView.view;
-  UIViewController *rootViewController = [[[[UIApplication sharedApplication] windows] firstObject] rootViewController];
-  
-  
-  [rootViewController addChildViewController:playerViewController];
-  playerViewController.view.frame = rootViewController.view.frame;
-  [rootViewController.view addSubview:playerViewController.view];
-  [playerViewController didMoveToParentViewController:rootViewController];
-
-  
-  playerViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
+  UIView *playerView = PlayerView.view;
+  [view addSubview:playerView];
+  playerView.translatesAutoresizingMaskIntoConstraints = NO;
   [NSLayoutConstraint activateConstraints:@[
-    [playerViewController.view.topAnchor constraintEqualToAnchor:rootViewController.view.topAnchor],
-    [playerViewController.view.bottomAnchor constraintEqualToAnchor:rootViewController.view.bottomAnchor],
-    [playerViewController.view.leadingAnchor constraintEqualToAnchor:rootViewController.view.leadingAnchor],
-    [playerViewController.view.trailingAnchor constraintEqualToAnchor:rootViewController.view.trailingAnchor]
+    [playerView.topAnchor constraintEqualToAnchor:view.topAnchor],
+    [playerView.bottomAnchor constraintEqualToAnchor:view.bottomAnchor],
+    [playerView.leadingAnchor constraintEqualToAnchor:view.leadingAnchor],
+    [playerView.trailingAnchor constraintEqualToAnchor:view.trailingAnchor]
   ]];
 }
 
